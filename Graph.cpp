@@ -19,7 +19,7 @@ void Graph :: setComponent(int value, int i, int j)
 	matrixA[i][j] = value;
 }
 
-string Graph::to_string()
+/*string Graph::to_string()
 {
 	string str1 = "";
 	string s = "";
@@ -34,7 +34,7 @@ string Graph::to_string()
 		str1 = str1 + "\n";
 	}
 	return str1;
-}
+}*/
 void Graph :: runs(int nodeI, int nodeJ)
 {
 	for(int i=0; i<size; i++)
@@ -180,11 +180,11 @@ void Graph :: dijkstra(int nodeI)
 			}
 			paths -> push(nodeI);
 			cout << "\nPath of node " << (nodeI+1) << " to node " << (i+1) << ": ";
-			c = paths -> getTop();
-			do{
+			c = paths->getTop();
+			while(c >= 0) {
 				cout << (c+1) << " ";
-				c = paths -> getTop();
-			} while(c >= 0);
+				c = paths->pop(); // You need to remove the top element after using it // Then get the next top element
+			}
 			cout << "\nWith minimun cost of: " << D[i];
 		}
 	}

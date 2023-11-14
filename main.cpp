@@ -23,7 +23,7 @@ int main() {
         cout << endl;
     }
 
-	cout << graph.to_string() << endl;
+	//cout << graph.to_string() << endl;
     graph.dijkstra(0); 
 
     return 0;
