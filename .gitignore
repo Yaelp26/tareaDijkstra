@@ -1,0 +1,9 @@
+/.vscode
+/build
+/Graph.o
+/main.o
+/Makefile.win
+/Stack.o
+/tareaDijkstra.dev
+/tareaDijkstra.exe
+/tareaDijkstra.layout
